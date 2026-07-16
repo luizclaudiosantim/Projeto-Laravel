@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $origem="P";
-    //teste para quando a tela vem de dois lugares diferentes e preciso saber de onde veio
+    
 
     return view('welcome',['origem'=>$origem]);
 });
@@ -13,4 +13,14 @@ Route::get('/', function () {
 
 Route::get('/teste', function () {
     return view('teste');
+});
+
+Route::get('/produtos', function () {
+    $busca = request('search');
+    return view('produtos',['busca'=>$busca]);
+});
+
+
+Route::get('/product/{id?}', function ($id=null) {
+    return view('product', ['id' => $id]);
 });
