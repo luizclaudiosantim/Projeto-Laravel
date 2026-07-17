@@ -6,7 +6,7 @@
 @section('content')
 
 
-        <h1>ola mundi</h1>
+        <h1>ola mundo</h1>
         @if(10>5)
             <p>Condição verdadeira</p>
         @endif

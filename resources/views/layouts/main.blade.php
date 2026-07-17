@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <!-- CSS da aplicação -->
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/scripts.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/script.js"></script>
     </head>
     <body>
       <header>
@@ -28,7 +28,7 @@
                 <a href="/" class="nav-link">Eventos</a>
               </li>
               <li class="nav-item">
-                <a href="/" class="nav-link">Criar Eventos</a>
+                <a href="/produtos/cadastrar" class="nav-link">Criar Eventos</a>
               </li>
               <li class="nav-item">
                 <a href="/" class="nav-link">Entrar</a>
@@ -44,5 +44,7 @@
       <footer>
         <p>HDC Events &copy; 2020</p>
       </footer>
+      <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

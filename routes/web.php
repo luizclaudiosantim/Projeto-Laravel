@@ -2,23 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+use App\Http\Controllers\ProductController;
 
-    $origem="P";
-    
+Route::get('/', [ProductController::class,'index']);
 
-    return view('welcome',['origem'=>$origem]);
-});
+Route::get('/produtos/cadastrar', [ProductController::class,'create']);
+
 
 
 Route::get('/teste', function () {
     return view('teste');
 });
 
-Route::get('/produtos', function () {
-    $busca = request('search');
-    return view('produtos',['busca'=>$busca]);
-});
 
 
 Route::get('/product/{id?}', function ($id=null) {
