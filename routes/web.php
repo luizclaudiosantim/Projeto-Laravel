@@ -3,19 +3,20 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ProductController;
-
-Route::get('/', [ProductController::class,'index']);
-
-Route::get('/produtos/cadastrar', [ProductController::class,'create']);
-
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\PedidoController;
 
 
-Route::get('/teste', function () {
-    return view('teste');
-});
+Route::get('/', [ProdutoController::class,'index']);
+
+Route::get('/produtos/cadastrar', [ProdutoController::class,'create']);
+
+Route::post('/products',[ProdutoController::class,'store']);
 
 
+Route::resource('/clientes', ClienteController::class);
 
-Route::get('/product/{id?}', function ($id=null) {
-    return view('product', ['id' => $id]);
-});
+Route::resource('produtos', ProdutoController::class);
+
+Route::resource('pedidos', PedidoController::class);
